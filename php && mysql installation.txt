@@ -1,0 +1,33 @@
+############################## step 1: install php ##########################################
+
+sudo apt install apache2 php  phpunit php8.1-curl  -y
+
+############################### step 2: mysql install server ################################
+
+sudo apt install mysql-server -y
+
+#################### step 3: setup user && password for mysql ###############################
+
+sudo mysql
+use  mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root1234';
+exit
+
+############################ step 4 : install phpmyadmin ####################################
+
+sudo apt install phpmyadmin -y
+
+################## step 5 : make project read+ write + execute ##############################
+
+// after that go to /var/www/ 
+// open terminal
+// execute below command
+
+sudo chmod 777 -R html
+
+################################## step 6 : login in php myadmin ############################
+
+//hit url : localhost/phpmyadmin
+
+user : root
+password : root1234
